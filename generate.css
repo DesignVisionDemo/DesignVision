@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #0D1117;
+    color: #fff;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    width: 800px;
+    max-width: 90%;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .container {
+    background: #161B22;
+    color: #fff;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-btn:hover {
+    background: #f0f0f0;
+}
+
+body.dark-mode .theme-btn {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-mode .theme-btn:hover {
+    background: #444;
+}
+
+/* Home button positioned at top left */
+.home-btn {
+    left: 20px;
+    right: auto;
+}
+
+.dropdown-container {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.upload-box, .output-box {
+    width: 48%;
+    min-width: 280px;
+    height: 300px;
+    border: 3px dashed #ccc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background: #fafafa;
+    transition: border 0.3s ease-in-out, background 0.3s;
+    font-size: 18px;
+}
+
+.upload-box:hover, .output-box:hover {
+    border-color: #007bff;
+}
+
+.upload-box p, .output-box p {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Only hide the uploaded and output images initially */
+#uploaded-image, #output-image {
+    display: none;
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 8px;
+}
+
+/* Sample images styling */
+.sample-img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.sample-img:hover {
+    border-color: #007bff;
+}
+
+.upload-box input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+body.dark-mode .upload-box,
+body.dark-mode .output-box {
+    background: #333;
+    border-color: #555;
+    color: #ddd;
+}
+
+body.dark-mode .upload-box:hover,
+body.dark-mode .output-box:hover {
+    border-color: #007bff;
+}
+
+.button-container {
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 8px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#clear-btn {
+    background: #ff4d4d;
+}
+
+#clear-btn:hover {
+    background: #cc0000;
+}
+
+body.dark-mode button {
+    background: #007bff;
+}
+
+body.dark-mode #clear-btn {
+    background: #d9534f;
+}
+
+body.dark-mode #clear-btn:hover {
+    background: #c9302c;
+}
+
+.loading {
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Sample images section styling */
+.sample-images {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.sample-images p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sample-image-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upload-box, .output-box {
+        width: 100%;
+    }
+    
+    .sample-img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    label, select, .dropdown-container {
+        font-size: 16px;
+    }
+}

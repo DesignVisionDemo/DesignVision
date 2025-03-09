@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DesignVision - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">DesignVision</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="generate.html">Try It</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <a href="index.html" class="btn-download" id="logout-btn">Logout</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your AI-enabled personal interior designer.</h1>
+      <p>
+        Easily redesign your space using AI-driven suggestions.
+        With DesignVision, transform any room in just a few clicks.
+        Get inspired and discover amazing furniture to bring your vision to life.
+      </p>
+      <a href="#how-it-works" class="btn-cta">See how it works</a>
+    </div>
+    <div class="juxtapose" data-mode="horizontal" data-startingposition="50">
+      <!-- First image: Before -->
+      <img src="images/before.jpg" alt="Before">
+      <!-- Second image: After -->
+      <img src="images/after.jpg"  alt="After">
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section id="how-it-works" class="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+      <!-- STEP 1 -->
+      <div class="step">
+        <div class="step-img">
+          <img src="images/step1.jpg" alt="Step 1">
+        </div>
+        <div class="step-content">
+          <h3>Step 1: Capture Your Space</h3>
+          <p>
+            Upload a photo or a sketch. Our AI analyzes your image to identify dimensions and design opportunities.
+          </p>
+        </div>
+      </div>
+      <!-- STEP 2 -->
+      <div class="step">
+        <div class="step-img">
+          <img src="images/step2.jpg" alt="Step 2">
+        </div>
+        <div class="step-content">
+          <h3>Step 2: Choose Your Styling Theme</h3>
+          <p>
+            Pick from Modern, Minimalistic, or Classic styles to create your unique design concept.
+          </p>
+        </div>
+      </div>
+      <!-- STEP 3 -->
+      <div class="step">
+        <div class="step-img">
+          <img src="images/step3.jpg" alt="Step 3">
+        </div>
+        <div class="step-content">
+          <h3>Step 3: AI-Generated Redesign</h3>
+          <p>
+            Our AI reimagines your space and displays multiple design options, including furniture layout and decor suggestions.
+          </p>
+        </div>
+      </div>
+      <!-- STEP 4 -->
+      <div class="step">
+        <div class="step-img">
+          <img src="images/step4.jpg" alt="Step 4">
+        </div>
+        <div class="step-content">
+          <h3>Step 4: Finalize & Shop</h3>
+          <p>
+            Finalize your design and shop for the recommended furniture to transform your room with ease.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optionally, you can add a footer here -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include JuxtaposeJS JS from a CDN -->
+  <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+  <script>
+    // Logout behavior with loading animation
+    document.getElementById('logout-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      let overlay = document.createElement('div');
+      overlay.id = 'logout-loading';
+      overlay.style.position = 'fixed';
+      overlay.style.top = '0';
+      overlay.style.left = '0';
+      overlay.style.width = '100%';
+      overlay.style.height = '100%';
+      overlay.style.background = 'rgba(0, 0, 0, 0.5)';
+      overlay.style.display = 'flex';
+      overlay.style.justifyContent = 'center';
+      overlay.style.alignItems = 'center';
+      overlay.innerHTML = '<div class="loading"></div>';
+      document.body.appendChild(overlay);
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

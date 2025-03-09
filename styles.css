@@ -1,0 +1,339 @@
+/* ------------------------------
+   RESET / BASE STYLES
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #0D1117; /* Dark background */
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Lists */
+  ul {
+    list-style: none;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* ------------------------------
+     NAVBAR
+  ------------------------------ */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #161B22;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #58A6FF;
+  }
+  
+  .navbar ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar li {
+    font-size: 0.95rem;
+    color: #C9D1D9;
+    transition: color 0.3s;
+  }
+  
+  .navbar li:hover {
+    color: #fff;
+  }
+  
+  /* Download/Logout Button in Navbar */
+  .navbar .btn-download {
+    background-color: #238636;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar .btn-download:hover {
+    background-color: #2ea043;
+  }
+  
+  /* ------------------------------
+     THEME TOGGLE BUTTON
+  ------------------------------ */
+  .theme-btn {
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 1rem;
+    color: #333;
+  }
+  
+  .theme-btn:hover {
+    background: #f0f0f0;
+  }
+  
+  /* ------------------------------
+     HERO SECTION (HOME PAGE)
+  ------------------------------ */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #0D1117;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    color: #C9D1D9;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-cta {
+    background-color: #58A6FF;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-cta:hover {
+    background-color: #3392FF;
+  }
+  
+  .hero-image {
+    max-width: 45%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  
+  /* ------------------------------
+     HOW IT WORKS SECTION (HOME)
+  ------------------------------ */
+  .how-it-works {
+    padding: 2rem;
+    background-color: #0D1117;
+  }
+  
+  .how-it-works h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .step:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .step-img {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  .step-content {
+    flex: 1;
+    color: #C9D1D9;
+  }
+  
+  .step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .step-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* ------------------------------
+     BUTTON CONTAINERS (HOME)
+  ------------------------------ */
+  .button-container {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .button-container button {
+    background: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    margin: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .button-container button:hover {
+    background: #0056b3;
+  }
+  
+  /* ------------------------------
+     RESPONSIVE
+  ------------------------------ */
+  @media (max-width: 992px) {
+    .hero {
+      flex-direction: column;
+    }
+    .hero-content {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+    .hero-image {
+      max-width: 100%;
+    }
+    .step {
+      flex-direction: column !important;
+    }
+    .step:nth-child(even) {
+      flex-direction: column !important;
+    }
+  }
+  
+  /* ------------------------------
+     LOGIN PAGE
+  ------------------------------ */
+  .login-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    background-color: #161B22;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+  
+  .login-container h1 {
+    margin-bottom: 1rem;
+    color: #58A6FF;
+    text-align: center;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+  }
+  
+  .login-form input {
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #0D1117;
+    color: #fff;
+  }
+  
+  .login-form button {
+    background-color: #238636;
+    padding: 0.6rem;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #2ea043;
+  }
+  
+  #error-message {
+    color: #ff4d4d;
+    margin-top: 0.5rem;
+    display: none;
+  }
+  
+  /* ------------------------------
+     ABOUT PAGE
+  ------------------------------ */
+  .about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #161B22;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    text-align: center;
+  }
+  
+  .about-container h1 {
+    color: #58A6FF;
+    margin-bottom: 1rem;
+  }
+  
+  .about-container p {
+    color: #C9D1D9;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-container h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .juxtapose {
+    max-width: 800px;
+    margin: 0 auto;
+  }

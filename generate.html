@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="generate.css" />
+</head>
+<body>
+  <!-- Top buttons: Dark mode (top right) and Home (top left) -->
+  <button id="theme-toggle" class="theme-btn">🌙</button>
+  <button id="home-btn" class="theme-btn home-btn">🏠</button>
+
+  <div class="container">
+    <h1>AI Interior Designer</h1>
+    <div class="dropdown-container">
+      <label for="model">Model:</label>
+      <select id="model">
+        <option value="Modern">Modern</option>
+        <option value="Minimalistic">Minimalistic</option>
+        <option value="Classic">Classic</option>
+      </select>
+    </div>
+    
+    <div class="image-section">
+      <div class="upload-box">
+        <p class="upload-text">Upload your image here</p>
+        <input type="file" id="image-input" accept="image/*" />
+        <img id="uploaded-image" alt="Uploaded Image" />
+      </div>
+      
+      <div class="output-box">
+        <p class="output-text">AI Generated Output</p>
+        <img id="output-image" alt="Output Image" />
+      </div>
+    </div>
+
+    <!-- "Try These Images" Section -->
+    <div class="sample-images">
+      <p>Try these images:</p>
+      <div class="sample-image-list">
+        <img src="input1.png" alt="Sample Image 1" class="sample-img">
+        <img src="input2.png" alt="Sample Image 2" class="sample-img">
+        <img src="input3.png" alt="Sample Image 3" class="sample-img">
+      </div>
+    </div>
+    
+    <div class="button-container">
+      <button id="generate-btn">Generate</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+    
+  </div>
+
+  <script src="generate.js"></script>
+</body>
+</html>
